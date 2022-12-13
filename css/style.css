@@ -1,0 +1,20 @@
+.btn.btn-outline-success:hover{
+    background-color: #ddcf4b !important;
+}   
+
+@media (max-width: 964px) {  
+    .url-form {
+        margin-top: 0 !important;
+    }
+  }
+  @import url(https://fonts.googleapis.com/css?family=Calibri:400,300,700);
+
+  body{
+     
+      
+      vertical-align: middle;
+      display: flex;
+      font-family: 'Calibri', sans-serif !important;
+      background-color:#eee;
+  }
+  
