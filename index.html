@@ -33,9 +33,17 @@
                 padding-top: 10px;
                 padding-bottom: 10px;
                 border-bottom: solid 2px rgb(196, 196, 196);
+                font-size: 20px;
               "
             >
-              <a class="navbar-brand" href="#">GETPIC</a>
+              <a class="navbar-brand" href="#"
+                ><img
+                  src="./images/gallery-img.png"
+                  style="width: 30px"
+                  alt=""
+                />
+                GETPIC</a
+              >
               <button
                 class="navbar-toggler"
                 type="button"
@@ -67,10 +75,10 @@
                       style="
                         background-color: #f8f9fa;
                         border: none;
-                        color: rgb(80, 80, 80);
+                        color: rgb(61, 61, 61);
                         height: 100%;
                         padding: 0;
-                        font-size: 16px;
+                        font-size: 20px;
                       "
                     >
                       Extractor
@@ -137,94 +145,94 @@
           <div class="row">
             <div class="col d-flex justify-content-center">
               <div class="container-fluid">
-                <div class="row">
+                <div class="row" style="height: auto">
                   <p
                     style="
                       font-family: 'Oswald';
                       font-size: 100px;
                       font-weight: 500;
-                      height: 150px;
+                      height: auto;
                       text-align: center;
-                      min-width: 500px;
+                      width: 100%;
                     "
                   >
                     GETPIC
                   </p>
                 </div>
-                <div class="row">
+                <div class="row" style="height: auto">
                   <p
                     style="
                       font-family: 'Oswald';
-                      font-size: 50px;
+                      font-size: 4vw;
                       font-weight: 400;
-                      height: 150px;
+                      height: auto;
                       text-align: center;
+                      margin-bottom: 50px;
                     "
                   >
-                    Get Pictures <br />
-                    From Other Websites
+                    Get Pictures From Other Websites
                   </p>
                 </div>
               </div>
             </div>
             <div class="col d-flex justify-content-center">
-              <div class="row">
-                <div class="container-fluid">
-                  <form
-                    class="url-form"
+              <div
+                class="container"
+                style="height: 150px; margin-top: auto; margin-bottom: auto"
+              >
+                <form
+                  class="url-form"
+                  style="
+                    display: grid !important;
+                    grid-template-columns: 1fr auto;
+                    width: 100%;
+                    min-width: 400px;
+                  "
+                >
+                  <textarea
+                    id="input-url"
+                    placeholder="Enter HTML Code..."
+                    rows="1"
+                    cols="1"
                     style="
-                      display: grid !important;
-                      grid-template-columns: 1fr auto;
+                      font-family: 'Oswald';
                       width: 100%;
-                      margin-top: 150px;
-                      min-width: 400px;
+                      min-width: 200px;
+                      height: 50px;
+                      text-indent: 20px;
+                      justify-self: center;
+                      padding-top: 10px;
+                      border-radius: 5px;
+                      margin-right: 10px;
+                      margin-bottom: 20px;
                     "
+                  ></textarea>
+                  <button
+                    type="button"
+                    onclick="retrieveURL()"
+                    class="btn btn-outline-dark"
+                    style="height: 50px"
                   >
-                    <textarea
-                      id="input-url"
-                      placeholder="Enter HTML Code..."
-                      rows="1"
-                      cols="1"
-                      style="
-                        font-family: 'Oswald';
-                        width: 100%;
-                        min-width: 200px;
-                        height: 50px;
-                        text-indent: 20px;
-                        justify-self: center;
-                        padding-top: 10px;
-                        border-radius: 5px;
-                        margin-right: 10px;
-                        margin-bottom: 20px;
-                      "
-                    ></textarea>
-                    <button
-                      type="button"
-                      onclick="retrieveURL()"
-                      class="btn btn-outline-dark"
-                      style="height: 50px"
-                    >
-                      Retrieve
-                    </button>
-                  </form>
-                  <form class="d-flex" style="height: 35px; width: 100%">
-                    <input
-                      id="search-bar"
-                      class="form-control me-2"
-                      type="file"
-                      placeholder="Enter URL"
-                      aria-label="Search"
-                    />
-                    <button
-                      type="button"
-                      onclick="clearGallery(),clearFields()"
-                      class="btn btn-outline-dark"
-                      style="margin-right: 5px"
-                    >
-                      Clear
-                    </button>
-                  </form>
-                </div>
+                    Retrieve
+                  </button>
+                </form>
+                <form class="d-flex" style="height: 35px; width: 100%">
+                  <input
+                    id="search-bar"
+                    class="form-control me-2"
+                    type="file"
+                    placeholder="Enter URL"
+                    aria-label="Search"
+                  />
+                  <button
+                    type="button"
+                    onclick="clearGallery(),clearFields()"
+                    class="btn btn-outline-dark"
+                    style="margin-right: 5px"
+                  >
+                    Clear
+                  </button>
+                </form>
               </div>
             </div>
           </div>
