@@ -6,7 +6,8 @@ const button = document.querySelector('button');
 const textarea = document.querySelector('#input-url');
 const indicators = document.querySelector('.carousel-indicators')
 const slide = document.querySelector('.carousel-inner')
-const raidioBtn = document.querySelector('input[name="flexRadioDefault"]')
+const switchBtn1 = document.querySelector('#flexSwitchCheckChecked')
+const switchBtn2 = document.querySelector('#flexSwitchCheckDefault')
 
 var globalFile;
 var imgURL=[]
@@ -60,28 +61,28 @@ function linkExtract(files){
                 for(let b =charIndex; b<testLine[i].length-reduce;b++){
                   link += testLine[i].charAt(b);
                 }
-                if (link.search("mitaku")!=-1){
-                  if (imgURL.length == 0 && tail == ""){
-                    tail = link
-                  }
-                  else if(tailFound){
-                    break;
-                  }
-                  else{
-                    if (tail != link){
-                      imgURL.push(link)
-                    }
-                    else if (tail == link){
-                      imgURL.push(link)
-                      tailFound =true;
-                    }
-                  }
-                }
-                else{
-                  if(prev_URL != link && link.search("gif")==-1)
+                // if (link.search("mitaku")!=-1){
+                //   if (imgURL.length == 0 && tail == ""){
+                //     tail = link
+                //   }
+                //   else if(tailFound){
+                //     break;
+                //   }
+                //   else{
+                //     if (tail != link){
+                //       imgURL.push(link)
+                //     }
+                //     else if (tail == link){
+                //       imgURL.push(link)
+                //       tailFound =true;
+                //     }
+                //   }
+                // }
+                // else{
+                  if(prev_URL != link && link.search("gif")==-1 && link.search("Cover") == -1)
                     imgURL.push(link)
                     prev_URL = link
-                  }
+                //  }
                 }
               }
             }
@@ -111,10 +112,10 @@ function retrieveURL(){
     console.log("Fields are empty")
   }
   else{
-    if (raidioBtn.checked){
+    if (switchBtn1.checked){
       galleryImgViewer();
     }
-    else{
+    if(switchBtn2.checked){
       carouselImgViewer();
     }
   }
