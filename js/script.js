@@ -131,7 +131,7 @@ function galleryImgViewer() {
   
     const colCard =
     '<div class="card" style="width: 18rem; height:500px; padding: 5px; margin-top:10px; margin-bottom: 10px">'+
-      '<img id="img-card" src="'+imgURL[divCount-1]+'" class="card-img-top" style="object-fit: cover !important;height: 100%;" alt="..."/>'+
+      '<img id="img-card" src="'+imgURL[divCount-1]+'" class="card-img-top" style="object-fit: cover !important;height: 90%;" alt="..."/>'+
       '<div class="card-body">'+
       '<p class="card-text d-flex justify-content-center">Image'+divCount+'</p>'+
     '</div>'+
